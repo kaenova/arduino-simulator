@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 141.84, "left": -164.66, "attrs": {} },
+    { "type": "wokwi-slide-switch", "id": "sw1", "top": -4.61, "left": -32.15, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -45.47,
+      "left": -225.06,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 10.2,
+      "left": -182.4,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -47.5,
+      "left": 42.35,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 3.28,
+      "left": 97.86,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "sw1:2", "uno:GND.2", "green", [ "v0" ] ],
+    [ "sw1:1", "uno:3", "green", [ "v109.85", "h87.99" ] ],
+    [ "sw1:3", "uno:2", "green", [ "v104.46", "h78.49" ] ],
+    [ "r1:1", "led1:A", "green", [ "v0" ] ],
+    [ "led1:C", "uno:GND.2", "green", [ "v0" ] ],
+    [ "r1:2", "uno:8", "green", [ "v0" ] ],
+    [ "r2:2", "uno:7", "green", [ "v157.42", "h-132.52" ] ],
+    [ "led2:A", "r2:1", "green", [ "v0" ] ],
+    [ "led2:C", "uno:GND.2", "green", [ "h-17.08", "v-35.34", "h-286.77", "v374.18" ] ]
+  ]
+}
