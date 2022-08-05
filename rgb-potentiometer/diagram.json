@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 41.33, "left": -29.33, "attrs": {} },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": -90.04,
+      "left": -72.66,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -98.87,
+      "left": 36.72,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -70.89,
+      "left": 37.76,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -34.62,
+      "left": 36.72,
+      "attrs": { "value": "1000" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 43.06, "left": -129.86, "attrs": {} }
+  ],
+  "connections": [
+    [ "rgb1:B", "r1:1", "green", [ "v0" ] ],
+    [ "rgb1:G", "r2:1", "green", [ "v3.96", "h84.02" ] ],
+    [ "rgb1:R", "r3:1", "green", [ "v0" ] ],
+    [ "r3:2", "uno:13", "green", [ "v0" ] ],
+    [ "r2:2", "uno:12", "green", [ "h8.73", "v112.22" ] ],
+    [ "r1:2", "uno:11", "green", [ "h19.01", "v140.2" ] ],
+    [ "rgb1:COM", "uno:GND.1", "green", [ "v0" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v65.69", "h256.8" ] ],
+    [ "pot1:GND", "uno:GND.2", "black", [ "v77.12", "h226.3" ] ]
+  ],
+  "serialMonitor": { "display": "auto", "newline": "lf" }
+}
